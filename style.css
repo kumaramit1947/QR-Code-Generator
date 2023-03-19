@@ -1,0 +1,102 @@
+:root {
+    --primary-blue: rgb(32, 13, 69);
+    --primary-white: rgb(248, 243, 221);
+    --grey: rgb(60, 59, 61);
+    --shadow-color: rgba(0,0,0,0.3);
+}
+* {
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.wrapper {
+    max-width: 280px;
+    height: 170px;
+    border-radius: 5px;
+    background-color: var(--primary-white);
+    box-shadow: 5px 5px 10px var(--shadow-color);
+    padding: 20px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+
+/* Header... */
+header h1{
+    font-size: 22px;
+    margin: 0;
+}
+header p {
+    font-size: 16px;
+    color: var(--grey);
+    margin:0;
+    margin-bottom: 20px;    
+}
+/* ... */
+
+/* Main... */
+main {
+    width: 258px;
+}
+
+/* Input section... */
+.user-input{
+    /* border: 1px solid black; */
+    height: 100px;
+    width: 99%;
+}
+ .input-box {
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--primary-blue);
+    padding-left: 10px;
+    border-radius: 5px;
+    color: var(--primary-blue);
+    
+ }
+ .input-box:focus{
+    box-shadow: 5px 5px 10px var(--shadow-color);
+ }
+ .user-input button{
+    height: 40px;
+    width: 100%;
+    color: var(--primary-white);
+    background-color: var(--primary-blue);
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor:pointer;
+ }
+ .user-input button:hover {
+    color: white;
+    box-shadow: 5px 5px 10px var(--shadow-color);
+ }
+ /* ... */
+ /* QR section... */
+ .qr-container{
+    height: 190px;
+    width: 99%;
+    border: 1px dotted var(--grey);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .no-display {
+    display: none;
+ }
+ /* ... */
+/* ... */
