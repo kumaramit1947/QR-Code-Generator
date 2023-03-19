@@ -16,13 +16,14 @@ inputBtn.addEventListener('click', () => {
     inputBtn.innerHTML = 'Generating QR...';
     fetch(`${qrAPIUrl}${inputBox.value}`)
         .then((res) => {
+            if(!res.ok) throw new Error('QR not fetched');
             qrBox.src = res.url;
             qrContainer.classList.remove('no-display');
             wrapper.style.height = '390px';
             inputBtn.innerHTML = 'Generate QR';
         })
         .catch((err) => {
-            inputBtn.innerHTML = 'Incorrect Input!';
+            inputBtn.innerHTML = 'QR not fetched';
             wrapper.style.height = '170px';
             qrBox.src = "";
             qrContainer.classList.add('no-display');
@@ -34,6 +35,9 @@ inputBox.addEventListener('keyup', () => {
         wrapper.style.height = '170px';
         qrBox.src = "";
         qrContainer.classList.add('no-display');
+        inputBtn.innerHTML = 'Generate QR';
+    }
+    else {
         inputBtn.innerHTML = 'Generate QR';
     }
 })

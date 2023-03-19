@@ -94,6 +94,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
  }
  .no-display {
     display: none;
